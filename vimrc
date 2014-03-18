@@ -50,9 +50,21 @@ Bundle 'git://github.com/altercation/vim-colors-solarized.git'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'https://github.com/ervandew/supertab.git' 
 Bundle 'https://github.com/scrooloose/syntastic'
+Bundle 'https://github.com/oscfri/vim-js-context-coloring'
 
 set background=dark
 colorscheme solarized
+
+"1: white, 2: green, 3: yellow, 4: blue, 5: red, 6: cyan, 7: grey
+let g:js_context_colors = [
+            \'#839996',
+            \'#719e07',
+            \'#bf8900',
+            \'#268bd2',
+            \'#cb4b15',
+            \'#2aa198',
+            \'#6c71c4']
+let g:js_context_colors_debug = 1
 
 filetype plugin indent on
 "
