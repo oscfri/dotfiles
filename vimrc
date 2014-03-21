@@ -9,9 +9,14 @@ set laststatus=2
 set history=512
 set wildmenu
 set wildmode=longest:full
-set guifont=Monospace\ 14
 set guioptions=
 set scrolloff=10
+
+" Linux font
+set guifont=Monospace\ 14
+
+" Windows font
+"set guifont=courier_new:h14
 
 " Show highligting groups for current word
 nmap <C-S-P> :call <SID>SynStack()<CR>
