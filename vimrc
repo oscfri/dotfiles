@@ -13,6 +13,7 @@ Plugin 'gmarik/vundle'
 Plugin 'git://github.com/altercation/vim-colors-solarized.git'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'https://github.com/ervandew/supertab.git' 
+Bundle 'pangloss/vim-javascript'
 Plugin 'https://github.com/scrooloose/syntastic'
 " Plugin 'https://github.com/oscfri/vim-js-context-coloring'
 
