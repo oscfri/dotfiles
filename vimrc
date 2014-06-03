@@ -17,6 +17,9 @@ Bundle 'pangloss/vim-javascript'
 Plugin 'https://github.com/scrooloose/syntastic'
 " Plugin 'https://github.com/oscfri/vim-js-context-coloring'
 
+"Automatically set working directory
+autocmd BufEnter * silent! lcd %:p:h
+
 set background=dark
 colorscheme solarized
 
