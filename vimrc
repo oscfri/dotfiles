@@ -6,7 +6,7 @@ filetype off
 let g:syntastic_check_on_open = 1
 let g:syntastic_javascript_checkers = ['jslint']
 
-set rtp+=~/.vim/bundle/vundle
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/vundle'
@@ -15,6 +15,7 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'https://github.com/ervandew/supertab.git' 
 Bundle 'pangloss/vim-javascript'
 Plugin 'https://github.com/scrooloose/syntastic'
+Plugin 'https://github.com/hynek/vim-python-pep8-indent.git'
 " Plugin 'https://github.com/oscfri/vim-js-context-coloring'
 
 "Automatically set working directory
@@ -33,6 +34,8 @@ let g:js_context_colors = [
             \'#2aa198',
             \'#6c71c4']
 let g:js_context_colors_debug = 1
+
+let g:syntastic_mode_map = {'mode': 'passive'}
 
 call vundle#end()
 filetype plugin indent on
@@ -59,6 +62,7 @@ set wildmode=longest:full
 set guioptions=
 set scrolloff=10
 set colorcolumn=80
+set mousehide
 
 " Linux font
 set guifont=Monospace\ 14
@@ -76,7 +80,6 @@ function! <SID>SynStack()
 endfunc
 
 " Go plugins
-set rtp+=$GOROOT/misc/vim/
 filetype plugin indent on
 syntax on
 
