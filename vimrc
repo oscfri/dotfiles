@@ -16,13 +16,23 @@ Plugin 'https://github.com/ervandew/supertab.git'
 Bundle 'pangloss/vim-javascript'
 Plugin 'https://github.com/scrooloose/syntastic'
 Plugin 'https://github.com/hynek/vim-python-pep8-indent.git'
+Plugin 'https://github.com/mattn/flappyvird-vim'
+Plugin 'https://github.com/kien/ctrlp.vim'
 " Plugin 'https://github.com/oscfri/vim-js-context-coloring'
+
+"CtrlP configuration
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+set wildignore+=*.pyc
 
 "Automatically set working directory
 autocmd BufEnter * silent! lcd %:p:h
 
-set background=dark
-colorscheme solarized
+if has('gui_running')
+    set background=light
+    colorscheme solarized
+endif
 
 "1: white, 2: green, 3: yellow, 4: blue, 5: red, 6: cyan, 7: grey
 let g:js_context_colors = [
