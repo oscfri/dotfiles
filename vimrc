@@ -9,15 +9,19 @@ let g:syntastic_javascript_checkers = ['jslint']
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 Plugin 'git://github.com/altercation/vim-colors-solarized.git'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'https://github.com/ervandew/supertab.git' 
-Bundle 'pangloss/vim-javascript'
+Plugin 'pangloss/vim-javascript'
 Plugin 'https://github.com/scrooloose/syntastic'
 Plugin 'https://github.com/hynek/vim-python-pep8-indent.git'
 Plugin 'https://github.com/mattn/flappyvird-vim'
 Plugin 'https://github.com/kien/ctrlp.vim'
+Plugin 'tpope/vim-fugitive.git'
+Plugin 'tpope/vim-surround.git'
+Plugin 'tpope/vim-repeat.git'
+Plugin 'tpope/vim-commentary.git'
 " Plugin 'https://github.com/oscfri/vim-js-context-coloring'
 
 "CtrlP configuration
@@ -45,7 +49,8 @@ let g:js_context_colors = [
             \'#6c71c4']
 let g:js_context_colors_debug = 1
 
-let g:syntastic_mode_map = {'mode': 'passive'}
+"Syntax check only when :SyntasticCheck is called
+"let g:syntastic_mode_map = {'mode': 'passive'}
 
 call vundle#end()
 filetype plugin indent on
@@ -89,8 +94,6 @@ function! <SID>SynStack()
     echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
-" Go plugins
-filetype plugin indent on
 syntax on
 
 " Map leader
