@@ -1,3 +1,5 @@
+syntax on
+
 " Vundle configuration
 set nocompatible
 filetype off
@@ -5,6 +7,9 @@ filetype off
 " Syntastic configuration
 let g:syntastic_check_on_open = 1
 let g:syntastic_javascript_checkers = ['jslint']
+
+" Python colon syntax fix
+set iskeyword-=:
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -22,6 +27,7 @@ Plugin 'tpope/vim-fugitive.git'
 Plugin 'tpope/vim-surround.git'
 Plugin 'tpope/vim-repeat.git'
 Plugin 'tpope/vim-commentary.git'
+Plugin 'jaxbot/semantic-highlight.vim'
 " Plugin 'https://github.com/oscfri/vim-js-context-coloring'
 
 "CtrlP configuration
@@ -94,8 +100,7 @@ function! <SID>SynStack()
     echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
-syntax on
-
 " Map leader
 let mapleader=" "
 
+let g:semanticGUIColors = ["#839496", "#b58900", "#cb4b16", "#dc322f", "#d33682", "#6c71c4", "#268bd2", "#2aa198",  "#859900", "#719e07"]
