@@ -47,6 +47,7 @@ filetype plugin indent on
 " NOTE: comments after Plugin command are not allowed..
 
 set number
+set relativenumber
 set softtabstop=4
 set shiftwidth=4
 set autoindent
@@ -59,6 +60,11 @@ set wildmode=longest:full
 set guioptions=
 set scrolloff=10
 set colorcolumn=80
+
+" Swap current line with below line
+map - ddp
+" Swap current line with above line
+map _ ddkP
 
 " Linux font
 set guifont=Monospace\ 14
