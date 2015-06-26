@@ -75,7 +75,6 @@ filetype plugin indent on
 " NOTE: comments after Plugin command are not allowed..
 
 set number
-set relativenumber
 set softtabstop=4
 set shiftwidth=4
 set autoindent
