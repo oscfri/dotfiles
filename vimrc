@@ -43,11 +43,6 @@ set wildignore+=*.pyc
 "Automatically set working directory
 autocmd BufEnter * silent! lcd %:p:h
 
-if has('gui_running')
-    set background=light
-    colorscheme solarized
-endif
-
 "1: white, 2: green, 3: yellow, 4: blue, 5: red, 6: cyan, 7: grey
 let g:js_context_colors = [
             \'#839996',
@@ -64,6 +59,11 @@ let g:js_context_colors_debug = 1
 
 call vundle#end()
 filetype plugin indent on
+
+if has('gui_running')
+    set background=light
+    colorscheme solarized
+endif
 "
 " Brief help
 " :PluginList          - list configured bundles
@@ -98,7 +98,7 @@ map _ ddkP
 set guifont=Monospace\ 14
 
 " Windows font
-" set guifont=courier_new:h14
+" set guifont=courier_new:h12
 
 " Show highligting groups for current word
 nmap <C-S-P> :call <SID>SynStack()<CR>
