@@ -28,6 +28,7 @@ Plugin 'tpope/vim-surround.git'
 Plugin 'tpope/vim-repeat.git'
 Plugin 'tpope/vim-commentary.git'
 Plugin 'jaxbot/semantic-highlight.vim'
+Plugin 'rking/ag.vim'
 " Plugin 'https://github.com/oscfri/vim-js-context-coloring'
 
 "CtrlP configuration
@@ -61,7 +62,7 @@ call vundle#end()
 filetype plugin indent on
 
 if has('gui_running')
-    set background=light
+    set background=dark
     colorscheme solarized
 endif
 "
@@ -95,7 +96,7 @@ map - ddp
 map _ ddkP
 
 " Linux font
-set guifont=Monospace\ 14
+set guifont=Monospace\ 12
 
 " Windows font
 " set guifont=courier_new:h12
@@ -113,3 +114,4 @@ endfunc
 let mapleader=" "
 
 let g:semanticGUIColors = ["#839496", "#b58900", "#cb4b16", "#dc322f", "#d33682", "#6c71c4", "#268bd2", "#2aa198",  "#859900", "#719e07"]
+
