@@ -11,7 +11,12 @@ let g:syntastic_javascript_checkers = ['jslint']
 " Python colon syntax fix
 set iskeyword-=:
 
-set rtp+=~/.vim/bundle/Vundle.vim
+" Windows backspace fix
+set backspace=indent,eol,start
+
+set shellslash
+
+set rtp+=~/_vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
@@ -36,7 +41,8 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_user_command = [
     \ '.git', 'cd %s && git ls-files . -co --exclude-standard',
-    \ 'find %s -type f'
+    \ 'find %s -type f',
+    \ 'dir %s /-n /b /s /a-d'
     \ ]
 
 set wildignore+=*.pyc
@@ -62,7 +68,7 @@ call vundle#end()
 filetype plugin indent on
 
 if has('gui_running')
-    set background=dark
+    set background=light
     colorscheme solarized
 endif
 "
@@ -96,10 +102,14 @@ map - ddp
 map _ ddkP
 
 " Linux font
-set guifont=Monospace\ 12
+if has('unix')
+    set guifont=Monospace\ 12
+endif
 
 " Windows font
-" set guifont=courier_new:h12
+if has('win32')
+    set guifont=courier_new:h12
+endif
 
 " Show highligting groups for current word
 nmap <C-S-P> :call <SID>SynStack()<CR>
@@ -114,4 +124,3 @@ endfunc
 let mapleader=" "
 
 let g:semanticGUIColors = ["#839496", "#b58900", "#cb4b16", "#dc322f", "#d33682", "#6c71c4", "#268bd2", "#2aa198",  "#859900", "#719e07"]
-
