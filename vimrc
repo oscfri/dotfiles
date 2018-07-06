@@ -16,7 +16,18 @@ set backspace=indent,eol,start
 
 set shellslash
 
-set rtp+=~/_vim/bundle/Vundle.vim
+
+" Unix specific settings
+if has('unix')
+    set guifont=Monospace\ 12
+    set rtp+=~/.vim/bundle/Vundle.vim
+endif
+
+" Windows specific settings
+if has('win32')
+    set guifont=courier_new:h12
+    set rtp+=~/_vim/bundle/Vundle.vim
+endif
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
@@ -100,16 +111,6 @@ set mousehide
 map - ddp
 " Swap current line with above line
 map _ ddkP
-
-" Linux font
-if has('unix')
-    set guifont=Monospace\ 12
-endif
-
-" Windows font
-if has('win32')
-    set guifont=courier_new:h12
-endif
 
 " Show highligting groups for current word
 nmap <C-S-P> :call <SID>SynStack()<CR>
