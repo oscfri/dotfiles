@@ -7,5 +7,5 @@ Setup (linux):
 ```
 git clone https://github.com/oscfri/dotfiles.git
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-ln -s ~/vimrc ~/.vimrc
+ln -s ~/dotfiles/vimrc ~/.vimrc
 ```
