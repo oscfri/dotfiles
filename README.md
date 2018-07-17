@@ -3,7 +3,9 @@ dotfiles
 
 Just a repo to make it easy for me to share my linux settings between computers.
 
-To make symbolic links to the files in this repo:
+Setup (linux):
 ```
-ln -s ~/path/to/repo/dotfiles/vimrc ~/.vimrc
+git clone https://github.com/oscfri/dotfiles.git
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+ln -s ~/vimrc ~/.vimrc
 ```
