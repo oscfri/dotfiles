@@ -45,6 +45,8 @@ Plugin 'tpope/vim-repeat.git'
 Plugin 'tpope/vim-commentary.git'
 Plugin 'jaxbot/semantic-highlight.vim'
 Plugin 'rking/ag.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 " Plugin 'https://github.com/oscfri/vim-js-context-coloring'
 
 "CtrlP configuration
@@ -107,6 +109,14 @@ set scrolloff=10
 set colorcolumn=80
 set mousehide
 
+" No namespace indent
+set cino=N-s
+
+" Set paste toggle
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
+
 " Swap current line with below line
 map - ddp
 " Swap current line with above line
@@ -124,4 +134,5 @@ endfunc
 " Map leader
 let mapleader=" "
 
-let g:semanticGUIColors = ["#839496", "#b58900", "#cb4b16", "#dc322f", "#d33682", "#6c71c4", "#268bd2", "#2aa198",  "#859900", "#719e07"]
+" Airline theme
+let g:airline_theme='solarized'
