@@ -110,9 +110,8 @@ set colorcolumn=80
 set mousehide
 
 " No namespace indent
-set cino=N-s
 " No public/private/protected indent
-set cino=g-1
+set cino=N-s,g-1
 
 " Set paste toggle
 nnoremap <F2> :set invpaste paste?<CR>
